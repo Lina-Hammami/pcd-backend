@@ -9,6 +9,7 @@ public class Matiere {
 	private String id;
 	private String name;
 	private String nbh;
+	private long timestamp;
 	
 	public Matiere() {
 		super();
@@ -18,6 +19,7 @@ public class Matiere {
 		super();
 		this.name = name;
 		this.nbh = nbh;
+		this.timestamp = System.currentTimeMillis();
 	}
 
 	public String getId() {

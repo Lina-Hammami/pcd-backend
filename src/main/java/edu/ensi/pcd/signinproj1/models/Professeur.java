@@ -1,7 +1,6 @@
 package edu.ensi.pcd.signinproj1.models;
 
-import javax.validation.constraints.NotNull;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,9 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Professeur {
 	@Id
 	private String id;
+	private String username;
 	private String email;
 	private String grade;
-	private String username;
+	//@Autowired
+	private Emploi emploiDuTemps;
+	private long timestamp;
 	
 	public Professeur() {
 		super();
@@ -20,6 +22,7 @@ public class Professeur {
 		super();
 		this.email = email;
 		this.grade = grade;
+		this.timestamp = System.currentTimeMillis();
 	}
 	
 	public Professeur( String email,String grade,String username) {
@@ -52,6 +55,17 @@ public class Professeur {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	public Emploi getEmploiDuTemps() {
+		return emploiDuTemps;
+	}
+	public void setEmploiDuTemps(Emploi emploiDuTemps) {
+		this.emploiDuTemps = emploiDuTemps;
+	}
 	
+	//TO_DO: 
+	// *Un prof peut créer/modifier une absence 
+	// **Un prof peut créer une alerte (etudiant_id, matiere_id)
+	// ***Un prof peut créer/modifier/supprimer une séance 
+	// ****Un prof peut créer/modifier/supprimer un seul emploi dans une seule semestre
 	
 }

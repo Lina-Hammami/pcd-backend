@@ -1,14 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+  <ion-tab-bar slot="bottom" color="dark">
+    <ion-tab-button tab="feed">
+      <ion-icon name="paper"></ion-icon>
+      <ion-label>Acceuil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="registre">
+      <ion-icon name="registre"></ion-icon>
+      <ion-label>Registre</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="settings">
+      <ion-icon name="cog"></ion-icon>
+      <ion-label>Configuration</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
