@@ -24,7 +24,7 @@ import edu.ensi.pcd.signinproj1.repos.SignInRequete;
 import edu.ensi.pcd.signinproj1.services.AdministrateurService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8082","http://localhost:8100", "http://localhost:4200"})
+@CrossOrigin(origins = {"http://localhost:8080","http://localhost:8100", "http://localhost:4200"})
 public class AdministrateurController {
 
 	@Autowired
