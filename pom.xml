@@ -14,6 +14,9 @@
 	<name>signinProj-1</name>
 	<description>signinproj</description>
 
+	<!-- define the packaging type -->
+	<packaging>jar</packaging>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
