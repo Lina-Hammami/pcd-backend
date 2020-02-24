@@ -41,22 +41,60 @@ public class AdministrateurController {
 		return administrateurService.saveAdministrateur(administrateur); 
 	}
 	
-	// Get all records
-	@GetMapping("/all/etudiants")
-	public List<Etudiant> getAllEdudiants(){
-		return administrateurService.getAllEtudiants();
-	}
+	/************************************************Get All********************************************************/
 	
 	@GetMapping("/all/professeurs")
 	public List<Professeur> getAllProfesseurs(){
 		return administrateurService.getAllProfesseurs();
 	}
 	
-	@GetMapping("/all/matieres")
-	public List<Matiere> getAllMatieres(){
+	@GetMapping("/all/etudiants")
+	public List<Etudiant> getAllEtudiants(){
+		return administrateurService.getAllEtudiants();
+	}
+	
+	@GetMapping("/all/classes")
+	public List<Matiere> getAllClasses(){
 		return administrateurService.getAllMatieres();
 	}
 	
+	@GetMapping("/all/matieres")
+	public List<Horaire> getAllMatieres(){
+		return administrateurService.getAllHoraires();
+	}
+	
+	@GetMapping("/all/salles")
+	public List<Salle> getAllSalles(){
+		return administrateurService.getAllSalles();
+	}
+	
+	@GetMapping("/all/horaires")
+	public List<Horaire> getAllHoraires(){
+		return administrateurService.getAllHoraires();
+	}
+	
+	@GetMapping("/all/seances")
+	public List<Seance> getAllSeances(){
+		return administrateurService.getAllSeances();
+	}
+	
+	@GetMapping("/all/absences")
+	public List<Seance> getAllAbsences(){
+		return administrateurService.getAllSeances();
+	}
+	
+	@GetMapping("/all/emplois")
+	public List<Emploi> getAllEmploies(){
+		return administrateurService.getAllEmplois();
+	}
+	
+	@GetMapping("/all/alertes")
+	public List<Alerte> getAllAlertes(){
+		return administrateurService.getAllAlertes();
+	}
+	
+	
+	/*********************************************************Adds***************************************************/
 	// Add records
 	@PostMapping("/add/professeur")
 	public Professeur addProfesseur(@RequestBody Professeur professeur) {

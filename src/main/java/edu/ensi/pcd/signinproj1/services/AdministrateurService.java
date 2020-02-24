@@ -154,7 +154,7 @@ public class AdministrateurService {
 	 * Tst:
 	 * consulter les alerte
 	 * */
-	public List<Alerte> getAllAlerte() {
+	public List<Alerte> getAllAlertes() {
 		return alerteRepository.findAll();
 	}
 	
