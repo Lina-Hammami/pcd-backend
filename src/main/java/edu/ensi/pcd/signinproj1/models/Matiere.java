@@ -7,8 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Matiere {
 	@Id
 	private String id;
-	private String name;
-	private String nbh;
+	private String nom;
+	private String nbrheures;
 	private long timestamp;
 	
 	public Matiere() {
@@ -17,8 +17,8 @@ public class Matiere {
 
 	public Matiere( String name,String nbh) {
 		super();
-		this.name = name;
-		this.nbh = nbh;
+		this.nom = name;
+		this.nbrheures = nbh;
 		this.timestamp = System.currentTimeMillis();
 	}
 
@@ -31,19 +31,19 @@ public class Matiere {
 	}
 
 	public String getNom() {
-		return name;
+		return nom;
 	}
 
 	public void setNom(String name) {
-		this.name = name;
+		this.nom = name;
 	}
 
 	public String getNbheures() {
-		return nbh;
+		return nbrheures;
 	}
 
 	public void setNbheures(String nbh) {
-		this.nbh = nbh;
+		this.nbrheures = nbh;
 	}
 	
 	
