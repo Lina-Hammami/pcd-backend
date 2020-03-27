@@ -8,9 +8,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Professeur {
 	@Id
 	private String id;
+	private String nom;
+	private String prenom;
 	private String username;
 	private String email;
 	private String grade;
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
 	//@Autowired
 	private Emploi emploiDuTemps;
 	private long timestamp;

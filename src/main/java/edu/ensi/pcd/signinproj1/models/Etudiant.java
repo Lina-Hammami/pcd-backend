@@ -9,9 +9,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Etudiant {
 	@Id
 	private String id;
+	private String nom;
+	private String prenom;
 	private String email;
 	private String classe;
 	private String username;
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
 	
 	public Etudiant() {
 		super();

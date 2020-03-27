@@ -15,9 +15,9 @@ public class Matiere {
 		super();
 	}
 
-	public Matiere( String name,String nbh) {
+	public Matiere( String nom,String nbh) {
 		super();
-		this.nom = name;
+		this.nom = nom;
 		this.nbrheures = nbh;
 		this.timestamp = System.currentTimeMillis();
 	}

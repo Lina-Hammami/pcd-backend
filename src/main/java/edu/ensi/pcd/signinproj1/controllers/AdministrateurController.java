@@ -24,7 +24,7 @@ import edu.ensi.pcd.signinproj1.repos.SignInRequete;
 import edu.ensi.pcd.signinproj1.services.AdministrateurService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8080","http://localhost:8100", "http://localhost:4200"})
+@CrossOrigin(origins = {"http://localhost:8080","http://localhost:8086", "http://localhost:4200"})
 public class AdministrateurController {
 
 	@Autowired
@@ -136,5 +136,17 @@ public class AdministrateurController {
 	public Alerte addAlerte(@RequestBody Alerte alerte) {
 		return administrateurService.saveAlerte(alerte); 
 	}
+	@PostMapping("/delete/professeur")
+	public void removeProfesseur(@RequestBody Professeur professeur) {
+		administrateurService.deleteProfesseur(professeur); 
+	}
+	@PostMapping("/delete/etudiant")
+	public void removeEtudiant(@RequestBody Etudiant etudiant) {
+		administrateurService.deleteEtudiant(etudiant); 
+	}
+	
+
+	
+	
 	
 }
