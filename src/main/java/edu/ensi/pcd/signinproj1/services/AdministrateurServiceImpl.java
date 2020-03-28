@@ -20,7 +20,7 @@ import edu.ensi.pcd.signinproj1.repos.AdministrateurRepository;
 import edu.ensi.pcd.signinproj1.repos.ClasseRepository;
 import edu.ensi.pcd.signinproj1.repos.EtudiantRepository;
 import edu.ensi.pcd.signinproj1.repos.HoraireRepository;
-/*import edu.ensi.pcd.signinproj1.repos.MatiereRepository;*/
+import edu.ensi.pcd.signinproj1.repos.MatiereRepository;
 import edu.ensi.pcd.signinproj1.repos.ProfesseurRepository;
 import edu.ensi.pcd.signinproj1.repos.SalleRepository;
 import edu.ensi.pcd.signinproj1.repos.SeanceRepository;
@@ -39,8 +39,8 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	private EtudiantRepository etudiantRepository;
 	@Autowired
 	private ClasseRepository classeRepository;
-	/*@Autowired
-	private MatiereRepository matiereRepository;*/
+	@Autowired
+	private MatiereRepository matiereRepository;
 	private SalleRepository salleRepository;
 	@Autowired
 	private HoraireRepository horaireRepository;
@@ -53,7 +53,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	@Autowired
 	private AlerteRepository alerteRepository;
 
-	
+
 	/************************************************* consultations ***************************************************/
 
 	/* UC:
@@ -66,7 +66,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 		}
 		return admin;
 	}
-	
+
 	/*
 	 * Tst:
 	 * pour créer un administrateur 
@@ -75,7 +75,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 		administrateurRepository.save(administrateur);
 		return administrateur;
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut consulter tout les étudiants
@@ -91,7 +91,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Professeur> getAllProfesseurs() {
 		return professeurRepository.findAll();
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut consulter toutes les classes
@@ -99,15 +99,15 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Classe> getAllClasses() {
 		return classeRepository.findAll();
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut consulter toutes les matieres
 	 * */
-/*	public List<Matiere> getAllMatieres() {
+	public List<Matiere> getAllMatieres() {
 		return matiereRepository.findAll();
-	}*/
-	
+	}
+
 	/**
 	 * UC:
 	 * un administrateur peut consulter toutes les salles
@@ -123,7 +123,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Horaire> getAllHoraires() {
 		return horaireRepository.findAll();
 	}
-	
+
 	/**
 	 * Tst:
 	 * consulter les seances
@@ -131,7 +131,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Seance> getAllSeances() {
 		return seanceRepository.findAll();
 	}
-	
+
 	/**
 	 * Tst:
 	 * consulter les absences
@@ -139,7 +139,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Absence> getAllAbsences() {
 		return absenceRepository.findAll();
 	}
-	
+
 	/**
 	 * Tst:
 	 * consulter les emplois
@@ -147,7 +147,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Emploi> getAllEmplois() {
 		return emploiRepository.findAll();
 	}
-	
+
 
 	/**
 	 * Tst:
@@ -156,7 +156,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public List<Alerte> getAllAlertes() {
 		return alerteRepository.findAll();
 	}
-	
+
 	/************************************************* créations ***************************************************/
 
 	/**
@@ -166,7 +166,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Professeur saveProfesseur(Professeur professeur) {
 		return professeurRepository.save(professeur);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter un étudiant
@@ -174,7 +174,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Etudiant saveEtudiant(Etudiant etudiant) {
 		return etudiantRepository.save(etudiant);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une classe
@@ -187,11 +187,11 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	 * UC:
 	 * un administrateur peut ajouter une matière
 	 * */
-	/*public Matiere saveMatiere(Matiere matiere) {
+	public Matiere saveMatiere(Matiere matiere) {
 		return matiereRepository.save(matiere);
-	}*/
-	
-	
+	}
+
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une matière
@@ -199,7 +199,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Salle saveSalle(Salle salle) {
 		return salleRepository.save(salle);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une matière
@@ -207,7 +207,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Horaire saveHoraire(Horaire horaire) {
 		return horaireRepository.save(horaire);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une seance
@@ -215,7 +215,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Seance saveSeance(Seance seance) {
 		return seanceRepository.save(seance);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une emploi
@@ -223,7 +223,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Emploi saveEmploi(Emploi emploi) {
 		return emploiRepository.save(emploi);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une absence
@@ -231,7 +231,7 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	public Absence saveAbsence(Absence absence) {
 		return absenceRepository.save(absence);
 	}
-	
+
 	/**
 	 * UC:
 	 * un administrateur peut ajouter une alerte
@@ -240,28 +240,18 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 		return alerteRepository.save(alerte);
 	}
 
-	
+
 	public void deleteProfesseur(Professeur professeur) {
 		professeurRepository.delete(professeur);
-		
+
 	}
 
 	@Override
 	public void deleteEtudiant(Etudiant etudiant) {
 		etudiantRepository.delete(etudiant);
-		
+
 	}
 
-	@Override
-	public List<Matiere> getAllMatieres() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public Matiere saveMatiere(Matiere matiere) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

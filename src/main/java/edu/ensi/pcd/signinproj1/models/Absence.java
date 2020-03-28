@@ -35,5 +35,11 @@ public class Absence {
 	public void setSeance_id(String seance_id) {
 		this.seance_id = seance_id;
 	}
+	public String getEtudiant_id() {
+		return etudiant_id;
+	}
+	public void setEtudiant_id(String etudiant_id) {
+		this.etudiant_id = etudiant_id;
+	}
 	
 }
