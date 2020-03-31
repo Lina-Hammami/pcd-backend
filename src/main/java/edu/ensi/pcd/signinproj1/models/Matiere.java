@@ -8,17 +8,23 @@ public class Matiere {
 	@Id
 	private String id;
 	private String nom;
-	private String nbrheures;
+	private String nombreHeures;
+	private String description;
+	private String niveau;
+	
+;
 	private long timestamp;
 	
 	public Matiere() {
 		super();
 	}
 
-	public Matiere( String nom,String nbh) {
+	public Matiere(String nom,String nbh,String desc,String niveau) {
 		super();
 		this.nom = nom;
-		this.nbrheures = nbh;
+		this.nombreHeures=nbh;
+		this.description=desc;
+		this.niveau=niveau;
 		this.timestamp = System.currentTimeMillis();
 	}
 
@@ -38,14 +44,31 @@ public class Matiere {
 		this.nom = name;
 	}
 
-	public String getNbheures() {
-		return nbrheures;
+	public String getNombreHeures() {
+		return nombreHeures;
 	}
 
-	public void setNbheures(String nbh) {
-		this.nbrheures = nbh;
+	public void setNombreHeures(String nombreHeures) {
+		this.nombreHeures = nombreHeures;
 	}
-	
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getNiveau() {
+		return niveau;
+	}
+
+	public void setNiveau(String niveau) {
+		this.niveau = niveau;
+	}
+
+
 	
 	
 	

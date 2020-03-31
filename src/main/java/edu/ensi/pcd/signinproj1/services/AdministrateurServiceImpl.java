@@ -20,6 +20,7 @@ import edu.ensi.pcd.signinproj1.repos.AdministrateurRepository;
 import edu.ensi.pcd.signinproj1.repos.ClasseRepository;
 import edu.ensi.pcd.signinproj1.repos.EtudiantRepository;
 import edu.ensi.pcd.signinproj1.repos.HoraireRepository;
+import edu.ensi.pcd.signinproj1.repos.MatiereRepository;
 /*import edu.ensi.pcd.signinproj1.repos.MatiereRepository;*/
 import edu.ensi.pcd.signinproj1.repos.ProfesseurRepository;
 import edu.ensi.pcd.signinproj1.repos.SalleRepository;
@@ -39,8 +40,9 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	private EtudiantRepository etudiantRepository;
 	@Autowired
 	private ClasseRepository classeRepository;
-	/*@Autowired
-	private MatiereRepository matiereRepository;*/
+	@Autowired
+	private MatiereRepository matiereRepository;
+	@Autowired
 	private SalleRepository salleRepository;
 	@Autowired
 	private HoraireRepository horaireRepository;
@@ -104,9 +106,9 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	 * UC:
 	 * un administrateur peut consulter toutes les matieres
 	 * */
-/*	public List<Matiere> getAllMatieres() {
+   public List<Matiere> getAllMatieres() {
 		return matiereRepository.findAll();
-	}*/
+	}
 	
 	/**
 	 * UC:
@@ -187,9 +189,9 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 	 * UC:
 	 * un administrateur peut ajouter une matière
 	 * */
-	/*public Matiere saveMatiere(Matiere matiere) {
+	public Matiere saveMatiere(Matiere matiere) {
 		return matiereRepository.save(matiere);
-	}*/
+	}
 	
 	
 	/**
@@ -252,16 +254,21 @@ public class AdministrateurServiceImpl implements AdministrateurService {
 		
 	}
 
+
 	@Override
-	public List<Matiere> getAllMatieres() {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteSalle(Salle salle) {
+		salleRepository.delete(salle);
 	}
 
 	@Override
-	public Matiere saveMatiere(Matiere matiere) {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteHoraire(Horaire horaire) {
+		horaireRepository.delete(horaire);		
+	}
+
+	@Override
+	public void deleteMatiere(Matiere matiere) {
+		matiereRepository.delete(matiere);
+		
 	}
 
 }

@@ -5,31 +5,31 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="salles")
 public class Salle {
 	private String id;
+
+	private String num;
 	private String etage;
-	private String surface; // ou nb_places posssibles 
-	private String nb_prises;
-	private String datashow; //etat du datashow, j'ai vu que c'est un peut important en terme du gain du temps
-	private String recommondation; // ken famma probleme mte3 7aja mkassra wla mahlouka, wla ay remarque okhra :p 
+	private String nombrePlacesPossibles; 
+	private String type;
+	private String etatDatashow; 
 	private long timestamp;
 	
 	public Salle() {
 		super();
 	}
-	public Salle(String id, String etage, String surface, String nb_prises, String datashow, String recommondation) {
+	public Salle(String num, String etage, String nombrePlacesPossibles, String type, String etatDatashow) {
 		super();
-		this.id = id;
+		this.num = num;
 		this.etage = etage;
-		this.surface = surface;
-		this.nb_prises = nb_prises;
-		this.datashow = datashow;
-		this.recommondation = recommondation;
+		this.nombrePlacesPossibles = nombrePlacesPossibles;
+		this.type = type;
+		this.etatDatashow = etatDatashow;
 		this.timestamp = System.currentTimeMillis();
 	}
-	public String getId() {
-		return id;
+	public String getNum() {
+		return num;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setNum(String num) {
+		this.num = num;
 	}
 	public String getEtage() {
 		return etage;
@@ -37,29 +37,32 @@ public class Salle {
 	public void setEtage(String etage) {
 		this.etage = etage;
 	}
-	public String getSurface() {
-		return surface;
+	public String getNombrePlacesPossibles() {
+		return nombrePlacesPossibles;
 	}
-	public void setSurface(String surface) {
-		this.surface = surface;
+	public void setNombrePlacesPossibles(String nombrePlacesPossibles) {
+		this.nombrePlacesPossibles = nombrePlacesPossibles;
 	}
-	public String getNb_prises() {
-		return nb_prises;
+	public String getType() {
+		return type;
 	}
-	public void setNb_prises(String nb_prises) {
-		this.nb_prises = nb_prises;
+	public void setType(String type) {
+		this.type = type;
 	}
-	public String getDatashow() {
-		return datashow;
+	public String getEtatDatashow() {
+		return etatDatashow;
 	}
-	public void setDatashow(String datashow) {
-		this.datashow = datashow;
+	public void setEtatDatashow(String etatDatashow) {
+		this.etatDatashow = etatDatashow;
 	}
-	public String getRecommondation() {
-		return recommondation;
+	public String getId() {
+		return id;
 	}
-	public void setRecommondation(String recommondation) {
-		this.recommondation = recommondation;
+	public void setId(String id) {
+		this.id = id;
 	}
+	
+	
+
 	
 }

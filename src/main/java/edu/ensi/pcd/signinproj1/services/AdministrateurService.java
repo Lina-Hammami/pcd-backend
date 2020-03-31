@@ -40,7 +40,10 @@ public interface AdministrateurService {
 	Alerte saveAlerte(Alerte alerte);
 	void deleteProfesseur(Professeur professeur);
 	void deleteEtudiant(Etudiant etudiant);
-	
+	void deleteSalle(Salle salle);
+	void deleteHoraire(Horaire horaire);
+	void deleteMatiere(Matiere matiere);
+
 	
 	
 	

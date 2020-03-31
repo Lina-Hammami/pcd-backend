@@ -59,17 +59,17 @@ public class AdministrateurController {
 	}
 	
 	@GetMapping("/all/matieres")
-	public List<Horaire> getAllMatieres(){
-		return administrateurService.getAllHoraires();
+	public List<Matiere> getAllMatieres(){
+		return administrateurService.getAllMatieres();
 	}
 	
 	@GetMapping("/all/salles")
-	public List<Salle> getAllSalles(){
+	public List<Salle> getSalles(){
 		return administrateurService.getAllSalles();
 	}
 	
 	@GetMapping("/all/horaires")
-	public List<Horaire> getAllHoraires(){
+	public List<Horaire> getHoraires(){
 		return administrateurService.getAllHoraires();
 	}
 	
@@ -144,7 +144,18 @@ public class AdministrateurController {
 	public void removeEtudiant(@RequestBody Etudiant etudiant) {
 		administrateurService.deleteEtudiant(etudiant); 
 	}
-	
+	@PostMapping("/delete/horaire")
+	public void removeHoraire(@RequestBody Horaire horaire) {
+		administrateurService.deleteHoraire(horaire);
+	}
+	@PostMapping("/delete/salle")
+	public void removeSalle(@RequestBody Salle salle) {
+		administrateurService.deleteSalle(salle);
+	}
+	@PostMapping("/delete/matiere")
+	public void removeMatiere(@RequestBody Matiere matiere) {
+		administrateurService.deleteMatiere(matiere);
+	}
 
 	
 	
