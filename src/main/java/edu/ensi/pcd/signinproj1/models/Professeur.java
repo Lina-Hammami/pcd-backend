@@ -13,6 +13,8 @@ public class Professeur {
 	private String username;
 	private String email;
 	private String grade;
+	private String password;
+
 	public String getNom() {
 		return nom;
 	}
@@ -76,6 +78,13 @@ public class Professeur {
 	public void setEmploiDuTemps(Emploi emploiDuTemps) {
 		this.emploiDuTemps = emploiDuTemps;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 	//TO_DO: 
 	// *Un prof peut créer/modifier une absence 
