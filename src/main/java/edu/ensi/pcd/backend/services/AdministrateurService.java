@@ -2,17 +2,17 @@ package edu.ensi.pcd.backend.services;
 
 import java.util.List;
 
-import edu.ensi.pcd.backend.models.Absence;
-import edu.ensi.pcd.backend.models.Administrateur;
-import edu.ensi.pcd.backend.models.Alerte;
-import edu.ensi.pcd.backend.models.Classe;
-import edu.ensi.pcd.backend.models.Emploi;
-import edu.ensi.pcd.backend.models.Etudiant;
-import edu.ensi.pcd.backend.models.Horaire;
-import edu.ensi.pcd.backend.models.Matiere;
-import edu.ensi.pcd.backend.models.Professeur;
-import edu.ensi.pcd.backend.models.Salle;
-import edu.ensi.pcd.backend.models.Seance;
+import edu.ensi.pcd.signinproj1.models.Absence;
+import edu.ensi.pcd.signinproj1.models.Administrateur;
+import edu.ensi.pcd.signinproj1.models.Alerte;
+import edu.ensi.pcd.signinproj1.models.Classe;
+import edu.ensi.pcd.signinproj1.models.Emploi;
+import edu.ensi.pcd.signinproj1.models.Etudiant;
+import edu.ensi.pcd.signinproj1.models.Horaire;
+import edu.ensi.pcd.signinproj1.models.Matiere;
+import edu.ensi.pcd.signinproj1.models.Professeur;
+import edu.ensi.pcd.signinproj1.models.Salle;
+import edu.ensi.pcd.signinproj1.models.Seance;
 
 public interface AdministrateurService {
 	
