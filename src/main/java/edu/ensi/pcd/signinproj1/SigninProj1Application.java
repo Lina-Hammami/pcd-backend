@@ -1,4 +1,4 @@
-package edu.ensi.pcd.backend;
+package edu.ensi.pcd.signinproj1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
