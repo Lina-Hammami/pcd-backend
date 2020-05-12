@@ -116,7 +116,7 @@ public class AuthController {
 
 					break;
 				case "prof":
-					Role profRole = roleRepository.findByName(ERole.ROLE_ETUDIANT)
+					Role profRole = roleRepository.findByName(ERole.ROLE_PROF)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 					roles.add(profRole);
 
