@@ -1,20 +1,39 @@
 package edu.ensi.pcd.signinproj1.models;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="professeurs")
 public class Professeur {
 	@Id
 	private String id;
+	@DBRef
+	private User user;
+	private String userId;
 	private String nom;
 	private String prenom;
-	private String username;
-	private String email;
-	private String grade;
-	private String password;
+	private String departement;
+	@DBRef
+	private List<Seance> seances;
+	private long timestamp;
 
+	public Professeur() {
+		super();
+	}
+	public Professeur(String nom, String prenom, String userId,String departement) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.userId = userId;
+		this.departement = departement;
+		this.setTimestamp(System.currentTimeMillis());
+	}
 	public String getNom() {
 		return nom;
 	}
@@ -27,62 +46,36 @@ public class Professeur {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-
-	//@Autowired
-	private Emploi emploiDuTemps;
-	private long timestamp;
 	
-	public Professeur() {
-		super();
-	}
-	public Professeur(String email,String grade) {
-		super();
-		this.email = email;
-		this.grade = grade;
-		this.timestamp = System.currentTimeMillis();
-	}
-	
-	public Professeur( String email,String grade,String username) {
-		super();
-		this.email = email;
-		this.grade = grade;
-		this.username = username;
-	}
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getEmail() {
-		return email;
+	public String getDepartement() {
+		return departement;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDepartement(String departement) {
+		this.departement = departement;
 	}
-	public String getGrade() {
-		return grade;
+	public List<Seance> getSeances() {
+		return seances;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public void setSeances(List<Seance> seances) {
+		this.seances = seances;
 	}
-	public String getUsername() {
-		return username;
+	public long getTimestamp() {
+		return timestamp;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
 	}
-	public Emploi getEmploiDuTemps() {
-		return emploiDuTemps;
+	public String getUserId() {
+		return userId;
 	}
-	public void setEmploiDuTemps(Emploi emploiDuTemps) {
-		this.emploiDuTemps = emploiDuTemps;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	
 	
