@@ -93,7 +93,7 @@ public class ProfServiceImpl implements  ProfService{
 
 	@Override
 	public List<Etudiant> getEtudiantsByClasseId(String classId) {
-		return etudiantRepository.findAll();
+		return etudiantRepository.findAllByClassId(classId);
 	}
 
 	@Override

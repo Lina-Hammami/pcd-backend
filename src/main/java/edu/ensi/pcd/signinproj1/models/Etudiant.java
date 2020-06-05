@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="etudiants")
 public class Etudiant {
 	@Id
-	private String userIsd;
+	private String userId;
 	private String nom;
 	private String prenom;
 	private String classeId;
@@ -21,14 +21,14 @@ public class Etudiant {
 
 	public Etudiant(String userIsd, String classeId) {
 		super();
-		this.userIsd = userIsd;
+		this.userId = userIsd;
 		this.classeId = classeId;
 	}
 
 
 	public Etudiant(String userIsd, String nom, String prenom, String classeId) {
 		super();
-		this.userIsd = userIsd;
+		this.userId = userIsd;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.classeId = classeId;
@@ -36,7 +36,7 @@ public class Etudiant {
 	
 	public Etudiant(String userIsd, String nom, String prenom, String classeId, List<Absence> absences) {
 		super();
-		this.userIsd = userIsd;
+		this.userId = userIsd;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.classeId = classeId;
@@ -56,12 +56,12 @@ public class Etudiant {
 		this.prenom = prenom;
 	}
 
-	public String getUserIsd() {
-		return userIsd;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUserIsd(String userIsd) {
-		this.userIsd = userIsd;
+	public void setUserId(String userIsd) {
+		this.userId = userIsd;
 	}
 
 	public String getClasseId() {
