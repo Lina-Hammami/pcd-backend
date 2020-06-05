@@ -8,5 +8,5 @@ import edu.ensi.pcd.signinproj1.models.Etudiant;
 
 public interface EtudiantRepository extends MongoRepository<Etudiant, String>{
 
-	List<Etudiant> findAllByClassId(String classId);
+	List<Etudiant> findAllByClasseId(String classeId);
 }
