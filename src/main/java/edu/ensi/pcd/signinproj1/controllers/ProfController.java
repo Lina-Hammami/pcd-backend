@@ -71,18 +71,17 @@ public class ProfController {
 
 	@GetMapping("/seances/{profId}")
 	@PreAuthorize("hasRole('PROF')")
-	public List<Seance> getSeancesByProfId(@PathVariable("profId") String profId){
-//		try {
-//		    List<Seance> seances = new ArrayList<Seance>();
-//		    profService.getSeancesbyProfId(profId).forEach(seances::add);
-//		    if (seances.isEmpty()) {
-//		      return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//		    }
-//		    return new ResponseEntity<>(seances, HttpStatus.OK);
-//		  } catch (Exception e) {
-//		    return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//		  }
-		return  profService.getSeancesbyProfId(profId);
+	public ResponseEntity<List<Seance>> getSeancesByProfId(@PathVariable("profId") String profId){
+		try {
+		    List<Seance> seances = new ArrayList<Seance>();
+		    profService.getSeancesbyProfId(profId).forEach(seances::add);
+		    if (seances.isEmpty()) {
+		      return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		    }
+		    return new ResponseEntity<>(seances, HttpStatus.OK);
+		  } catch (Exception e) {
+		    return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+		  }
 	}
 	
 	@PostMapping("/add/seance")
