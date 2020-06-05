@@ -155,7 +155,7 @@ public class ProfController {
 	
 	//-------------- registre page srv -----------------------------
 
-	@PostMapping("/etudiants/{classeId}")
+	@GetMapping("/etudiants/{classeId}")
 	@PreAuthorize("hasRole('PROF')")
 	public ResponseEntity<List<Etudiant>> getEtudiantsbyClassId(@PathVariable("classeId") String classeId) {
 		//return profService.getEtudiantsByClasseId(classeId);
