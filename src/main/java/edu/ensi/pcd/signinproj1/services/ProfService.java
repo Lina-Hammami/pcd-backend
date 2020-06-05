@@ -20,7 +20,7 @@ public interface ProfService {
 	List<Seance> getSeancesbyProfId(String profId);
 
 	
-	Optional<Professeur> getInfoByUserId(String usrId);
+	Professeur getProfileByUserId(String usrId);
 	List<Matiere> getMesMatieresByUserId(String userId);
 	List<Classe> getMesClassesByUserId(String userId);
 	

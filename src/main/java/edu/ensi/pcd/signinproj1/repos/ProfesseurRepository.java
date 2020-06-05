@@ -8,5 +8,5 @@ import edu.ensi.pcd.signinproj1.models.Professeur;
 
 
 public interface ProfesseurRepository extends MongoRepository<Professeur, String>{
-	Optional<Professeur> findByUserId(String userId);
+	Professeur findByUserId(String userId);
 }

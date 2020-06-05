@@ -110,12 +110,12 @@ public class ProfController {
 	
 	//--------------profile page srv -----------------------------
 	
-	@GetMapping("/info/{userId}")
+	@GetMapping("/profile/{userId}")
 	@PreAuthorize("hasRole('PROF')")
-	public ResponseEntity<Professeur> getInfo(@PathVariable("userId") String userId){
-		Optional<Professeur> prof =  profService.getInfoByUserId(userId);
-		 if (prof.isPresent()) {
-		    return new ResponseEntity<>(prof.get(), HttpStatus.OK);
+	public ResponseEntity<Professeur> getProfile(@PathVariable("userId") String userId){
+		Professeur prof =  profService.getProfileByUserId(userId);
+		 if (prof != null) {
+		    return new ResponseEntity<>(prof, HttpStatus.OK);
 		  } else {
 		    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		  }

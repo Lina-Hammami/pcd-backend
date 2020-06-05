@@ -58,7 +58,7 @@ public class ProfServiceImpl implements  ProfService{
 	
 
 	@Override
-	public Optional<Professeur> getInfoByUserId(String id) {
+	public Professeur getProfileByUserId(String id) {
 		return professeurRepository.findByUserId(id);
 	}
 
