@@ -19,6 +19,8 @@ public class Etudiant {
 	//private String username;
 	//private String password;
 
+	public Etudiant() {
+	}
 	public Etudiant(String userIsd, String classeId) {
 		super();
 		this.userId = userIsd;
@@ -26,17 +28,17 @@ public class Etudiant {
 	}
 
 
-	public Etudiant(String userIsd, String nom, String prenom, String classeId) {
+	public Etudiant(String userId, String nom, String prenom, String classeId) {
 		super();
-		this.userId = userIsd;
+		this.userId = userId;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.classeId = classeId;
 	}
 	
-	public Etudiant(String userIsd, String nom, String prenom, String classeId, List<Absence> absences) {
+	public Etudiant(String userId, String nom, String prenom, String classeId, List<Absence> absences) {
 		super();
-		this.userId = userIsd;
+		this.userId = userId;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.classeId = classeId;

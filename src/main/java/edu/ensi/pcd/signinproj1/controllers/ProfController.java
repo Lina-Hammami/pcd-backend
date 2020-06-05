@@ -167,6 +167,7 @@ public class ProfController {
 		    }
 		    return new ResponseEntity<>(etudiants, HttpStatus.OK);//success return
 		  } catch (Exception e) {
+			  System.out.println(e.toString());
 		    return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		  }
 	}
