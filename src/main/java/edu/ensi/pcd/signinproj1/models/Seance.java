@@ -29,24 +29,45 @@ public class Seance {
 		//this.emploi_id = emploi_id;
 		this.timestamp = System.currentTimeMillis();
 	}
-/*
+
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getmatiereId() {
+
+	public String getProfId() {
+		return profId;
+	}
+
+	public void setProfId(String profId) {
+		this.profId = profId;
+	}
+
+	public String getMatiereId() {
 		return matiereId;
 	}
-	public void setmatiereId(String matiereId) {
+
+	public void setMatiereId(String matiereId) {
 		this.matiereId = matiereId;
 	}
-	public String getclasseId() {
+
+	public String getClasseId() {
 		return classeId;
 	}
-	public void setclasseId(String classeId) {
+
+	public void setClasseId(String classeId) {
 		this.classeId = classeId;
+	}
+
+	public String getJourId() {
+		return jourId;
+	}
+
+	public void setJourId(String jourId) {
+		this.jourId = jourId;
 	}
 
 	public String getHdebut() {
@@ -64,5 +85,13 @@ public class Seance {
 	public void setHfin(String hfin) {
 		this.hfin = hfin;
 	}
-*/
+
+	public long getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}
+	
 }
