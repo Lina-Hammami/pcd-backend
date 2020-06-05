@@ -101,4 +101,10 @@ public class ProfServiceImpl implements  ProfService{
 		return absenceRepository.saveAll(listabsence);
 	}
 
+	@Override
+	public List<Seance> getSeancesbyProfId(String profId) {
+		// TODO Auto-generated method stub
+		return seanceRepository.findAllByProfId(profId);
+	}
+
 }

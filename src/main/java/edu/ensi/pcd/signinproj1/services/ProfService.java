@@ -17,6 +17,7 @@ public interface ProfService {
 	Seance saveSeance(Seance s);
 	void deleteSeance(String id);
 	void deleteAllSeances();//not impl yet
+	List<Seance> getSeancesbyProfId(String profId);
 
 	
 	Optional<Professeur> getInfoByUserId(String usrId);
