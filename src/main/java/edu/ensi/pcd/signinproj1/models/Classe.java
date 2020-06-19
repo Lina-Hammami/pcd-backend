@@ -10,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Classe {
 	@Id
 	private String id;
-	private List<Etudiant> listEtudiants;
+	private String nom;
+	//private List<Etudiant> listEtudiants;
 	
 	
 	public Classe() {
@@ -19,7 +20,7 @@ public class Classe {
 	public Classe(String id, List<Etudiant> listEtudiants) {
 		super();
 		this.id = id;
-		this.listEtudiants = listEtudiants;
+		//this.listEtudiants = listEtudiants;
 	}
 	public String getId() {
 		return id;
@@ -27,11 +28,18 @@ public class Classe {
 	public void setId(String id) {
 		this.id = id;
 	}
+	/*
 	public List<Etudiant> getListEtudiants() {
 		return listEtudiants;
 	}
 	public void setListEtudiants(List<Etudiant> listEtudiants) {
 		this.listEtudiants = listEtudiants;
+	}*/
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	
 	

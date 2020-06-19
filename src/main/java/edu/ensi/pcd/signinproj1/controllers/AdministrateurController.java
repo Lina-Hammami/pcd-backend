@@ -3,6 +3,7 @@ package edu.ensi.pcd.signinproj1.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +27,6 @@ import edu.ensi.pcd.signinproj1.services.AdministrateurService;
 @RestController
 @CrossOrigin(origins = {"http://localhost:8080","http://localhost:8086", "http://localhost:4200"})
 public class AdministrateurController {
-
 	@Autowired
 	private AdministrateurService administrateurService;
 	
@@ -54,8 +54,8 @@ public class AdministrateurController {
 	}
 	
 	@GetMapping("/all/classes")
-	public List<Matiere> getAllClasses(){
-		return administrateurService.getAllMatieres();
+	public List<Classe> getAllClasses(){
+		return administrateurService.getAllClasses();
 	}
 	
 	@GetMapping("/all/matieres")
@@ -105,10 +105,12 @@ public class AdministrateurController {
 		return administrateurService.saveEtudiant(etudiant); 
 	}
 	@PostMapping("/add/classe")
+	@PreAuthorize("hasRole('ADMIN')")
 	public Classe addClasse(@RequestBody Classe classe) {
 		return administrateurService.saveClasse(classe); 
 	}
 	@PostMapping("/add/matiere")
+	@PreAuthorize("hasRole('ADMIN')")
 	public Matiere addMatiere(@RequestBody Matiere matiere) {
 		return administrateurService.saveMatiere(matiere); 
 	}
@@ -156,7 +158,7 @@ public class AdministrateurController {
 	public void removeMatiere(@RequestBody Matiere matiere) {
 		administrateurService.deleteMatiere(matiere);
 	}
-
+	
 	
 	
 	
